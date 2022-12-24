@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using projet_dotnet.Data;
 using projet_dotnet.Models;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 
 namespace projet_dotnet.Controllers
 {
@@ -8,15 +11,27 @@ namespace projet_dotnet.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+       
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+      
+      
         }
 
         public IActionResult Index()
         {
             return View();
         }
+        public IActionResult Create()
+        {
+            
+            return View();
+        }
+   
+
+      
 
         public IActionResult Privacy()
         {
