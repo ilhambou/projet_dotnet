@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using projet_dotnet.Data;
 using projet_dotnet.Models;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -29,10 +31,10 @@ namespace projet_dotnet.Controllers
             
             return View();
         }
-   
 
-      
 
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Privacy()
         {
             return View();
