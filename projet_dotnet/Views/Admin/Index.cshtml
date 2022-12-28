@@ -1,0 +1,25 @@
+﻿
+
+<link rel="stylesheet" href="~/css/user.css" asp-append-version="true" />
+
+    @foreach (var user in ViewBag.Users)
+    {
+
+
+<div class="list-wrapper" ng-app="app" ng-controller="MainCtrl as ctrl">
+    <ul class="list">
+        <li class="list-item">
+          
+            <div class="list-item-content">
+            </div>
+        </li>
+        <li class="list-item">
+            <div>
+            </div>
+            <div class="list-item-content">
+                <h4>@user.UserName</h4>
+            </div>
+        </li>
+    </ul>
+</div>
+}

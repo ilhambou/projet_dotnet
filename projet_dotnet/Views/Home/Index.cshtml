@@ -3,3 +3,26 @@
 *@
 @{
 }
+
+<link rel="stylesheet" href="~/css/herosection.css" asp-append-version="true" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Hero Banner Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <img src="~/Image/pic.jpg"
+             alt="Hero Image">
+        <div class="hero-text">
+            <h1>BookStore</h1>
+            <p>une application de vente de livres,qui présente à ses clients différents livres</p>
+            <a asp-controller="Products" asp-action="Index" title="call to action button">Consulter les livres</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -13,5 +13,6 @@ namespace projet_dotnet.Data
         }
 
         public DbSet<Product> Products { get; set; }
+
     }
 }

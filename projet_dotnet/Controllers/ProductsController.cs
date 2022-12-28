@@ -11,7 +11,7 @@ using projet_dotnet.Models;
 
 namespace projet_dotnet.Controllers
 {
-    [Authorize(Roles = "Administrateur")]
+   
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,7 +22,7 @@ namespace projet_dotnet.Controllers
             _context = context;
             this._hostEnvironment = hostEnvironment;
         }
-
+        [Authorize]
         // GET: Products
         public async Task<IActionResult> Index()
         {
@@ -36,7 +36,7 @@ namespace projet_dotnet.Controllers
             {
                 return NotFound();
             }
-
+            
             var product = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
